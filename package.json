@@ -1,8 +1,19 @@
 {
+  "name": "playwright-bdd",
+  "version": "1.0.0",
+  "description": "A project showcasing Playwright with BDD for end-to-end testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "build": "npx bddgen",
+    "build:watch": "npx nodemon -w ./tests --exec 'npx bddgen'"
+  },
   "devDependencies": {
     "@types/node": "^22.10.5",
     "playwright-bdd": "^8.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
-  }
+  },
+  "author": "Daffa Hilmy Fadhlurrohman",
+  "license": "MIT"
 }
