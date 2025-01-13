@@ -1,21 +1,9 @@
 import { expect, Page } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
+import enterLoginCredentials from '@utils/enterLoginCredentials';
 
 const { Given, When, Then } = createBdd();
 
-const enterLoginCredentials = async (page: Page, username: string, password: string) => {
-    const usernameInput = page.getByTestId('username');
-    const passwordInput = page.getByTestId('password');
-    
-    await expect(usernameInput).toBeVisible();
-    await expect(passwordInput).toBeVisible();
-    
-    await usernameInput.fill(username, { force: true });
-    await passwordInput.fill(password, { force: true });
-    
-    await expect(usernameInput).toHaveValue(username);
-    await expect(passwordInput).toHaveValue(password);
-}
 
 Given('I open the login page', async ({ page }) => {
   await page.goto('/');
@@ -31,7 +19,7 @@ When('I fill in the login form with invalid {string} and {string}', async ({ pag
 
 
 When('I submit the login form', async ({ page }) => {
-  const loginButton = page.getByTestId('login-button');
+  const loginButton = page.locator('#login-button');
   await expect(loginButton).toBeVisible();
 
   await loginButton.click();

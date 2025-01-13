@@ -15,7 +15,6 @@ Feature: Login Functionality
             | username          | password      |
             | standard_user     | secret_sauce  |
 
-    @only
     Scenario: Login with invalid credentials
         When I fill in the login form with invalid "<username>" and "<password>"
         And I submit the login form
