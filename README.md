@@ -63,18 +63,6 @@ Ensure you have the following installed on your machine:
    npm test
    ```
 
-2. To run a specific feature file:
-
-   ```bash
-   npx cucumber-js path/to/feature/file.feature
-   ```
-
-3. For cross-browser testing:
-
-   ```bash
-   npm run test:cross-browser
-   ```
-
 ## Repository Structure
 
 ```plaintext
