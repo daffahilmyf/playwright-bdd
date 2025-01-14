@@ -7,8 +7,8 @@ Feature: Inventory Functionality - Glitch
         Given I open the login page
 
     Scenario: Navigation to inventory page expected to be slow
-        When I login with glitch "username" and "password"
-        Then I should be redirected to the inventory page more than "<timeout>" seconds
+        When I login with glitch "<username>" and "<password>"
+        Then I should be redirected to the inventory page more than "<timeout>" miliseconds
 
         Examples:
         | username                  | password      | timeout        |

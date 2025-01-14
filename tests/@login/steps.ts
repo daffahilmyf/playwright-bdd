@@ -1,6 +1,6 @@
 import { expect, Page } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
-import enterLoginCredentials from '@utils/enterLoginCredentials';
+import enterLoginCredentials from '@utils/actions/enterLoginCredentials';
 
 const { Given, When, Then } = createBdd();
 
